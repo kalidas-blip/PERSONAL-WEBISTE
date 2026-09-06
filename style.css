@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0b0b0d;
+  --bg-alt: #151517;
+  --text: #ebebee;
+  --text-soft: #8d8d95;
+  --accent: #ff3b5c;
+  --line: #29292d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+}
+
+.hero {
+  position: relative;
+  padding: 2rem 0 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 520px;
+  height: 520px;
+  transform: translate(-50%, -55%);
+  background: repeating-conic-gradient(from 0deg, var(--accent) 0deg 1deg, transparent 1deg 8deg);
+  opacity: 0.14;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.name {
+  position: relative;
+  z-index: 1;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(3rem, 10vw, 5rem);
+  letter-spacing: 0.06em;
+  margin: 0;
+  color: var(--text);
+  text-shadow: 0 0 28px rgba(255, 59, 92, 0.35);
+}
+
+.role {
+  position: relative;
+  z-index: 1;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  margin: 0.8rem 0 0;
+}
+
+.nav {
+  position: relative;
+  z-index: 1;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 1.8rem 0 0;
+  font-size: 0.85rem;
+}
+
+.nav li:not(:first-child)::before {
+  content: '/';
+  margin: 0 0.6em;
+  color: var(--text-soft);
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+main {
+  margin-top: 3.5rem;
+}
+
+section {
+  margin-bottom: 3.2rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+}
+
+.intro {
+  font-size: 1.05rem;
+  max-width: 58ch;
+  color: var(--text);
+  margin: 0 0 2.4rem;
+}
+
+.plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plain-list li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 0.55rem;
+  color: var(--text);
+}
+
+.plain-list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag-list li {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--text);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.tag-list li:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.tag-list.muted li {
+  color: var(--text-soft);
+}
+
+.tag-list.muted li:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-list li:last-child {
+  border-bottom: none;
+}
+
+.project-name {
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 160px;
+  flex: 0 0 auto;
+}
+
+.project-desc {
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  flex: 1 1 260px;
+}
+
+#modding p,
+#say-hi p {
+  max-width: 58ch;
+  color: var(--text);
+}
+
+#modding .tag-list {
+  margin-top: 1.2rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  font-size: 0.92rem;
+}
+
+.contact-list li {
+  margin-bottom: 0.5rem;
+  color: var(--text-soft);
+}
+
+.contact-list a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-list a:hover,
+.contact-list a:focus-visible {
+  border-bottom-color: var(--accent);
+}
+
+.site-foot {
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.72rem;
+  color: var(--text-soft);
+  text-align: center;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    padding: 3rem 1.2rem 2.5rem;
+  }
+  .name {
+    font-size: 2.6rem;
+  }
+  .burst {
+    width: 360px;
+    height: 360px;
+  }
+  .project-name {
+    min-width: 100%;
+  }
+}
