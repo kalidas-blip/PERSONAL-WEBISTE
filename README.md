@@ -1,0 +1,1 @@
+This my personal website.The first ever project that i built about myself. This project has 2 files like mentioned in guide a html and a css. I made this look like variety design. I also deployed it by github pages.
